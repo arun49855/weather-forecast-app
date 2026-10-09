@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyCast Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <p class="eyebrow">WEATHER DASHBOARD</p>
+        <h1>SkyCast</h1>
+        <p class="subtitle">A little forecast for your day.</p>
+      </div>
+      <div class="sun" aria-hidden="true">☀</div>
+    </header>
+
+    <form id="searchForm" class="search">
+      <label class="sr-only" for="cityInput">City name</label>
+      <input id="cityInput" type="text" placeholder="Enter a city (e.g. Chennai)" value="Chennai" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="message" class="message" role="status">Search for a city to get the latest forecast.</p>
+
+    <section id="weatherPanel" class="weather-panel" hidden>
+      <div class="current">
+        <div>
+          <p id="location" class="location"></p>
+          <p id="condition" class="condition"></p>
+          <p class="temp"><span id="temperature">--</span><span class="degree">°C</span></p>
+          <p id="updated" class="updated"></p>
+        </div>
+        <div id="weatherIcon" class="weather-icon" aria-hidden="true">🌤️</div>
+      </div>
+      <div class="details">
+        <div><span>Wind speed</span><strong id="wind">-- km/h</strong></div>
+        <div><span>Today's high</span><strong id="high">--°C</strong></div>
+        <div><span>Today's low</span><strong id="low">--°C</strong></div>
+      </div>
+      <h2>5-day outlook</h2>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <footer>Weather data via Open-Meteo · Student demo</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
